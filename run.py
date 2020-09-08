@@ -26,3 +26,16 @@ def save_account(user):
     Function that saves new account details
     '''
     User.create_account(user)
+def create_credentials(account, username, password):
+    '''
+    A function that creates new credentials
+    '''
+    new_credentials = Credentials(account, username, password)
+    return new_credentials
+
+def display_credentials():
+    '''
+    A function that returns saved credentials
+    '''
+
+    return Credentials.display_credentials()
