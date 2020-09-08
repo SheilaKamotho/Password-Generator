@@ -40,3 +40,31 @@ class Credentials:
         Method deletes a saved credential
         '''
         Credentials.credentials.remove(self)
+
+    @classmethod
+    def find_account(cls, account):
+        '''
+        Method that takes in an account and returns credentials.
+        '''
+        for Credentials in cls.credentials:
+            if Credentials.account == account:
+                return Credentials
+
+    @classmethod
+    def credentials_exist(cls, account):
+        ''' 
+        Method that checks if an acount credential exists and returns a boolean
+        '''
+        for Credentials in cls.credentials:
+            if Credentials.account == account:
+                return True
+        return False
+
+    @classmethod
+    def display_credentials(cls):
+         
+        '''
+        Method that displays credentials list
+        '''
+        return cls.credentials
+
