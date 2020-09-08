@@ -143,7 +143,6 @@ def main():
                     print(f'{account} username: {username} password: {password} created successfully')
                 
                 elif short_code == 'dc':
-
                     if display_credentials():
                         print("Here is a list of all your credentials")
                         print('\n')
@@ -158,15 +157,10 @@ def main():
                         print('\n')
 
                 elif short_code == 'del':
-                    print('Which account do you wish to delete:')
-                    account == input()
-                    account.remove()
-                    print('Write Username:')
-                    user_name == input()
-                    user_name.remove
-                    print('Write Password:')
-                    password == input()
-                    password.remove()
+
+
+
+                    
                     print('Account Deleted')
 
                 elif short_code == 'lo':
