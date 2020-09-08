@@ -17,16 +17,19 @@ def create_account(user_name, password):
     '''
     new_user = User(user_name, password)
     return new_user
-def login(user_name, password):
-    '''
-    Function that checks if an account exists and returns details
-    '''
-    return User.user_exist(user_name, password)
+
 def save_account(user):
     '''
     Function that saves new account details
     '''
     User.create_account(user)
+
+def login(user_name, password):
+    '''
+    Function that checks if an account exists and returns details
+    '''
+    return User.user_exist(user_name, password)
+
 def create_credentials(account, username, password):
     '''
     A function that creates new credentials
@@ -40,6 +43,24 @@ def display_credentials():
     '''
 
     return Credentials.display_credentials()
+
+def find_credentials(account):
+    '''
+    A function that finds credentials by account and returns them
+    '''
+
+    return Credentials.find_by_account(account)
+
+
+def check_existing_credentials(account):
+    '''
+    A function that checks if credentials exists with that account and returns a boolean
+    '''
+
+
+def random_password(psw_len):
+    return "".join(secrets.choice(string.ascii_letters+string.digits) for i in range(psw_len))
+
 def save_credentials(credentials):
     '''
     A function that saves credentials
@@ -52,9 +73,6 @@ def delete_credentials(credentials):
     A function that deletes credentials
     '''
     credentials.delete_credentials()
-
-def random_password(psw_len):
-    return "".join(secrets.choice(string.ascii_letters+string.digits) for i in range(psw_len))
 
 def main():
     print("Hello Welcome to your password app.")
@@ -135,4 +153,5 @@ def main():
         print('Invalid choice')    
 
 if __name__ == '__main__':
+
     main()
