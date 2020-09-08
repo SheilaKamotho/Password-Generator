@@ -55,3 +55,84 @@ def delete_credentials(credentials):
 
 def random_password(psw_len):
     return "".join(secrets.choice(string.ascii_letters+string.digits) for i in range(psw_len))
+
+def main():
+    print("Hello Welcome to your password app.")
+    log_success = False
+
+    while True:
+        print("Type r to Register a new user account  or l to Log In into an existing account")
+        answer = input().lower()
+
+        if answer == 'r':
+            print("Create new account")
+
+            print('Username: ')
+            user_name = input()
+
+            print('password: ')
+            password = input()
+        
+            save_account(create_account(user_name, password))
+            print(f'Account for {user_name} has been created')
+
+        elif answer == 'l':
+            print('Enter Username: ')
+            user_name = input()
+            print('Enter Password: ')
+            password = input()
+            log_success = login(user_name, password)if answer == 'l' else False
+
+            while log_success:
+                print('Type:\n se to save existing account\n na to create a new account\n lo to log out')
+
+                short_code = input().lower() 
+                if short_code == 'na':
+                    print('Enter Platform Name ie Twitter')
+                    account = input()
+
+                    print('Enter the username:  ')
+                    username = input()
+
+                    print('Password: ')
+                    print('Enter auto to automatically create password or gen to generate your own password')
+                    pw = input().lower()
+
+                    if pw == 'auto':
+                        print('Enter your preferred password length')
+                        ps_len = int(input())
+                        password = random_password(ps_len)
+                        print(f'Your new password for {account} is {password}')
+                    
+                    if pw == 'gen':
+                        print('Create password: ')
+                        password = input()
+                
+                elif short_code == 'se':
+                    print('Save existing account details')
+                    print(' Account:')
+                    account = input()
+
+                    print(f'\n username:')
+                    username = input()
+
+                    print('\n password:')
+                    password = input()
+
+                    save_credentials(create_credentials(account, username, password)) 
+                    print(f'{account} username: {username} password: {password} created successfully')
+            
+                elif short_code == 'lo':
+                    print('You have logged out')
+                    
+                else:
+                    print('Wrong input')
+                    save_credentials(create_credentials(account, username, password))
+                    print(f'Account credentials for {account} has been saved, username: {username} password: {password}')
+            else: 
+                print('Invalid Username or Password')
+    else:
+        print('Invalid choice')    
+
+if __name__ == '__main__':
+    main()
