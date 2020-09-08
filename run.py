@@ -10,3 +10,9 @@ import string
 # Copy to clipboard
 # Dictate length of password
 
+def create_account(user_name, password):
+    '''
+    Function that create new  log in account
+    '''
+    new_user = User(user_name, password)
+    return new_user
