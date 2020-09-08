@@ -104,7 +104,7 @@ def main():
             log_success = login(user_name, password)if answer == 'l' else False
 
             while log_success:
-                print('Type:\n se to save existing account\n na to create a new account\n dc to display accounts\n lo to log out')
+                print('Type:\n se to save existing account\n na to create a new account\n dc to display accounts\n del to delete\nlo to log out')
 
                 short_code = input().lower() 
                 if short_code == 'na':
@@ -157,8 +157,18 @@ def main():
                         print("You dont seem to have any accounts saved yet")
                         print('\n')
 
-                    
-            
+                elif short_code == 'del':
+                    print('Which account do you wish to delete:')
+                    account == input()
+                    account.remove()
+                    print('Write Username:')
+                    user_name == input()
+                    user_name.remove
+                    print('Write Password:')
+                    password == input()
+                    password.remove()
+                    print('Account Deleted')
+
                 elif short_code == 'lo':
                     print('You have logged out')
                     
