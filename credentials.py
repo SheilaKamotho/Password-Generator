@@ -33,7 +33,7 @@ class Credentials:
         '''
 
         Credentials.credentials.append(self)
-    
+
     def delete_credentials(self):
 
         '''
@@ -42,7 +42,7 @@ class Credentials:
         Credentials.credentials.remove(self)
 
     @classmethod
-    def find_account(cls, account):
+    def find_by_account(cls, account):
         '''
         Method that takes in an account and returns credentials.
         '''
