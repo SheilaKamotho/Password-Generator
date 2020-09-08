@@ -21,3 +21,8 @@ def login(user_name, password):
     Function that checks if an account exists and returns details
     '''
     return User.user_exist(user_name, password)
+def save_account(user):
+    '''
+    Function that saves new account details
+    '''
+    User.create_account(user)
