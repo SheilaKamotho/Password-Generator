@@ -16,3 +16,8 @@ def create_account(user_name, password):
     '''
     new_user = User(user_name, password)
     return new_user
+def login(user_name, password):
+    '''
+    Function that checks if an account exists and returns details
+    '''
+    return User.user_exist(user_name, password)
