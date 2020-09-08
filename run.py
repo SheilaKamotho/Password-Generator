@@ -3,13 +3,14 @@ from credentials import Credentials
 import secrets
 import string
 
-# Log in username and password 
-# Add existing account details 
-# Create new account credentials - random pasword/inputted password 
+# Log in username and password - Done
+# Add existing account details - Done
+# Create new account credentials - Done
+# Random pasword/inputted password - Done
 # View various account credentials and the passwords
 # Delete credentials
 # Copy to clipboard
-# Dictate length of password
+# Dictate length of password - Done
 
 def create_account(user_name, password):
     '''
