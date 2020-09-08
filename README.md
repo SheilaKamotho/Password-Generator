@@ -13,7 +13,8 @@ This is a password app that allows users to:
 ###### cd into your preferred location.
 ###### Clone the repo $ git clone https://github.com/SheilaKamotho/Password-Generator.git
 ###### cd Password-Generetor
-###### code . or atom . depending on the text editor of your choice.
+###### Enter code . or atom . depending on the text editor of your choice on the terminal.
+###### Run Program using $ ./run.py
 ## Link to GitHub Repository
 https://github.com/SheilaKamotho/Password-Generator.git
 ## CopyRight and License Information
