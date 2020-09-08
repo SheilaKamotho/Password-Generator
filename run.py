@@ -104,7 +104,7 @@ def main():
             log_success = login(user_name, password)if answer == 'l' else False
 
             while log_success:
-                print('Type:\n se to save existing account\n na to create a new account\n lo to log out')
+                print('Type:\n se to save existing account\n na to create a new account\n dc to display accounts\n lo to log out')
 
                 short_code = input().lower() 
                 if short_code == 'na':
@@ -141,6 +141,23 @@ def main():
 
                     save_credentials(create_credentials(account, username, password)) 
                     print(f'{account} username: {username} password: {password} created successfully')
+                
+                elif short_code == 'dc':
+
+                    if display_credentials():
+                        print("Here is a list of all your credentials")
+                        print('\n')
+
+                        for Credentials in display_credentials():
+                            print(f"{Credentials.account} {Credentials.user_name} .....{Credentials.password}")
+
+                            print('\n')
+                    else:
+                        print('\n')
+                        print("You dont seem to have any accounts saved yet")
+                        print('\n')
+
+                    
             
                 elif short_code == 'lo':
                     print('You have logged out')
