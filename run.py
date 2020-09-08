@@ -39,3 +39,15 @@ def display_credentials():
     '''
 
     return Credentials.display_credentials()
+def save_credentials(credentials):
+    '''
+    A function that saves credentials
+    '''
+
+    credentials.save_credentials()
+
+def delete_credentials(credentials):
+    '''
+    A function that deletes credentials
+    '''
+    credentials.delete_credentials()
