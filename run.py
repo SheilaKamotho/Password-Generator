@@ -2,6 +2,7 @@ from users import User
 from credentials import Credentials
 import secrets
 import string
+import pyperclip
 
 # Log in username and password - Done
 # Add existing account details - Done
