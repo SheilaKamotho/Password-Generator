@@ -14,7 +14,7 @@ This is a password app that allows users to:
 ###### Clone the repo $ git clone https://github.com/SheilaKamotho/Password-Generator.git
 ###### cd Password-Generetor
 ###### Enter code . or atom . depending on the text editor of your choice on the terminal.
-###### Run Program using $ ./run.py
+###### Run Program using $ run.py on the terminal
 ## Link to GitHub Repository
 https://github.com/SheilaKamotho/Password-Generator.git
 ## CopyRight and License Information
