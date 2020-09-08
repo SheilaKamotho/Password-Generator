@@ -33,3 +33,10 @@ class Credentials:
         '''
 
         Credentials.credentials.append(self)
+    
+    def delete_credentials(self):
+
+        '''
+        Method deletes a saved credential
+        '''
+        Credentials.credentials.remove(self)
