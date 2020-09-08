@@ -1,5 +1,6 @@
 from users import User
 from credentials import Credentials
+import secrets
 import string
 
 # Log in username and password 
@@ -51,3 +52,6 @@ def delete_credentials(credentials):
     A function that deletes credentials
     '''
     credentials.delete_credentials()
+
+def random_password(psw_len):
+    return "".join(secrets.choice(string.ascii_letters+string.digits) for i in range(psw_len))
